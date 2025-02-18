@@ -1,7 +1,3 @@
-// This is basic example for postgrest-go library usage.
-// For now this example is represent wanted syntax and bindings for library.
-// After core development this test files will be used for CI tests.
-
 package main
 
 import (
@@ -10,7 +6,8 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/supabase-community/supabase-go"
+
+	supabase "github.com/mrehanabbasi/supabase-go"
 )
 
 func main() {
@@ -30,11 +27,9 @@ func main() {
 	}
 	client.SignInWithEmailPassword(email, password)
 
-	//
 	rooms, _, err := client.From("rooms").Select("*", "", false).ExecuteString()
 	if err != nil {
 		panic(err)
 	}
 	fmt.Println(rooms)
-
 }
