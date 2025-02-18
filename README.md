@@ -28,7 +28,7 @@ An isomorphic Go client for Supabase.
 First of all, you need to install the library:
 
 ```sh
-  go get github.com/supabase-community/supabase-go
+  go get github.com/mrehanabbasi/supabase-go
 ```
 
 Then you can use
